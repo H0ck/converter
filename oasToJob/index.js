@@ -57,6 +57,7 @@ module.exports.convert = function convert(args) {
 
         if (!fs.existsSync('./h0ck-converter-output')) {
             fs.mkdirSync('./h0ck-converter-output');
+            
         }
         fs.writeFile('./h0ck-converter-output/outputJob-' + scenario + '.yaml', yaml.dump(jobResult), (err) => {
             if (err) {

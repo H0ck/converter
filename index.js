@@ -1,5 +1,6 @@
-const oasToJob = require('./oasToJob');
 console.log("test")
+
+const oasToJob = require('./oasToJob');
 
 let args = process.argv.slice(2);
 
