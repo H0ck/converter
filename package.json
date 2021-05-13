@@ -1,0 +1,22 @@
+{
+  "name": "h0ck-converter",
+  "version": "1.0.0",
+  "description": "Converter Package with multiple utils for converting some specifications to jobs specification",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/H0ck/converter.git"
+  },
+  "author": "AlexGue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/H0ck/converter/issues"
+  },
+  "homepage": "https://github.com/H0ck/converter#readme"
+}
