@@ -1,0 +1,7 @@
+title: "Job from H0ck-Converter-OAS"
+parametrizationGroups: []
+configuration:
+  limits:
+    parallelExecutions: 10
+    virtualUserExecutions: 1
+    requestPerSecond: 20

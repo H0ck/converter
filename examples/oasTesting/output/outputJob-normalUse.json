@@ -1,0 +1,157 @@
+{
+  "title": "Job from H0ck-Converter-OAS",
+  "code": "const newman = require('newman');\r\nconst axios = require('axios');\r\nmodule.exports.main = async function (params) {\r\n    return new Promise(async function(resolve, reject){\r\n        let result = {}\r\n        let collectionRequest = await axios.get(params.collectionUrl);\r\n        newman.run({\r\n            collection: collectionRequest.data,\r\n            reporters: 'cli'\r\n        }, function (err, response) {\r\n            if (err) { reject(err); throw err; }\r\n            result.stats = response.run.stats;\r\n     result.params = params;\r\n         result.timings = response.run.timings;\r\n            console.log('collection run complete!');\r\n            resolve(result);\r\n        });\r\n    })\r\n}",
+  "parametrizationGroups": [
+    {
+      "parameters": [
+        {
+          "name": "profile",
+          "type": "list",
+          "definition": "profile1"
+        },
+        {
+          "name": "userType",
+          "type": "list",
+          "definition": "pro"
+        },
+        {
+          "name": "collectionUrl",
+          "type": "list",
+          "definition": "https://www.getpostman.com/collections/d2ab69785f7c0676a820"
+        },
+        {
+          "name": "index",
+          "type": "ranges",
+          "definition": "1-1"
+        }
+      ]
+    },
+    {
+      "parameters": [
+        {
+          "name": "profile",
+          "type": "list",
+          "definition": "profile2"
+        },
+        {
+          "name": "userType",
+          "type": "list",
+          "definition": "pro"
+        },
+        {
+          "name": "collectionUrl",
+          "type": "list",
+          "definition": "https://www.getpostman.com/collections/4858d331523153ca2b7a"
+        },
+        {
+          "name": "index",
+          "type": "ranges",
+          "definition": "1-1"
+        }
+      ]
+    },
+    {
+      "parameters": [
+        {
+          "name": "profile",
+          "type": "list",
+          "definition": "profile3"
+        },
+        {
+          "name": "userType",
+          "type": "list",
+          "definition": "pro"
+        },
+        {
+          "name": "collectionUrl",
+          "type": "list",
+          "definition": "https://www.getpostman.com/collections/803aefcd12ef3e8ed5ee"
+        },
+        {
+          "name": "index",
+          "type": "ranges",
+          "definition": "1-1"
+        }
+      ]
+    },
+    {
+      "parameters": [
+        {
+          "name": "profile",
+          "type": "list",
+          "definition": "profile1"
+        },
+        {
+          "name": "userType",
+          "type": "list",
+          "definition": "normal"
+        },
+        {
+          "name": "collectionUrl",
+          "type": "list",
+          "definition": "https://www.getpostman.com/collections/d2ab69785f7c0676a820"
+        },
+        {
+          "name": "index",
+          "type": "ranges",
+          "definition": "1-1"
+        }
+      ]
+    },
+    {
+      "parameters": [
+        {
+          "name": "profile",
+          "type": "list",
+          "definition": "profile2"
+        },
+        {
+          "name": "userType",
+          "type": "list",
+          "definition": "normal"
+        },
+        {
+          "name": "collectionUrl",
+          "type": "list",
+          "definition": "https://www.getpostman.com/collections/4858d331523153ca2b7a"
+        },
+        {
+          "name": "index",
+          "type": "ranges",
+          "definition": "1-1"
+        }
+      ]
+    },
+    {
+      "parameters": [
+        {
+          "name": "profile",
+          "type": "list",
+          "definition": "profile3"
+        },
+        {
+          "name": "userType",
+          "type": "list",
+          "definition": "normal"
+        },
+        {
+          "name": "collectionUrl",
+          "type": "list",
+          "definition": "https://www.getpostman.com/collections/803aefcd12ef3e8ed5ee"
+        },
+        {
+          "name": "index",
+          "type": "ranges",
+          "definition": "1-1"
+        }
+      ]
+    }
+  ],
+  "configuration": {
+    "limits": {
+      "parallelExecutions": 10,
+      "virtualUserExecutions": 1,
+      "requestPerSecond": 20
+    }
+  }
+}

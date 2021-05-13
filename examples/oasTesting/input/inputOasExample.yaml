@@ -1,0 +1,36 @@
+profiles:
+  profile1:
+    url: "https://www.getpostman.com/collections/d2ab69785f7c0676a820"
+  profile2:
+    url: "https://www.getpostman.com/collections/4858d331523153ca2b7a"
+  profile3:
+    url: "https://www.getpostman.com/collections/803aefcd12ef3e8ed5ee"
+scenarios:
+  normalUse:
+    users:
+      - type: pro
+        count: 3
+        usage:
+          - profile1: 0.33
+          - profile2: 0.33
+          - profile3: 0.34
+      - type: normal
+        count: 3
+        usage:
+          - profile1: 0.33
+          - profile2: 0.33
+          - profile3: 0.34
+  heavyLoad:
+    users:
+      - type: pro
+        count: 4
+        usage:
+          - profile1: 0.1
+          - profile2: 0.5
+          - profile3: 0.4
+      - type: normal
+        count: 5
+        usage:
+          - profile1: 0.1
+          - profile2: 0.1
+          - profile3: 0.8
