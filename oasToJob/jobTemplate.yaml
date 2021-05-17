@@ -1,5 +1,6 @@
 title: "Job from H0ck-Converter-OAS"
 parametrizationGroups: []
+framework: 'h0ck-framework-testing'
 configuration:
   limits:
     parallelExecutions: 10
