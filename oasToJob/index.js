@@ -22,6 +22,7 @@ module.exports.convert = function convert(args) {
     Object.keys(oasFile.scenarios).forEach(scenario => {
         let jobResult = yaml.load(fs.readFileSync(__dirname + '/jobTemplate.yaml', 'utf8'));
         jobResult.code = utils.JSONEscape(fs.readFileSync(__dirname + '/jobCode.js', 'utf8'));
+        jobResult.resultProcessors.push(require('./resultProcessor-fieldAggregator'));
         oasFile.scenarios[scenario].users?.forEach(user => {
             user.usage?.forEach(usage => {
                 if (Math.round(user.count * Object.values(usage)[0]) > 0) {

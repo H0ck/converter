@@ -1,6 +1,6 @@
 {
   "name": "h0ck-converter",
-  "version": "1.7.0",
+  "version": "2.7.0",
   "description": "Converter Package with multiple utils for converting some specifications to jobs specification",
   "main": "index.js",
   "bin": "./index.js",

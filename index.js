@@ -1,7 +1,6 @@
-console.log("test")
+#!/usr/bin/env node
 
 const oasToJob = require('./oasToJob');
-
 let args = process.argv.slice(2);
 
 let converterCommandMapping = {
@@ -10,7 +9,7 @@ let converterCommandMapping = {
 
 module.exports.oasToJob = oasToJob;
 
-if (args.concat.length === 0){
+if (args.length === 0){
     //Dynamic execution
 
 } else{

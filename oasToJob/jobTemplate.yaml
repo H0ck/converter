@@ -6,3 +6,4 @@ configuration:
     parallelExecutions: 10
     virtualUserExecutions: 1
     requestPerSecond: 20
+resultProcessors: []
